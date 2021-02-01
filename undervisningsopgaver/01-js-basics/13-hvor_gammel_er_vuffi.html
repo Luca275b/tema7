@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <p>Hvad er din hunds menneskealder?</p>
+    <input type="text" id="alder_hund">
+    <button>Klik og se hvor gammel din hund er. Kik i konsollen.</button>
+
+    <script>
+        document.querySelector("button").addEventListener("click", buttonClicked)
+
+        function buttonClicked() {
+            let menneske = document.querySelector("#alder_hund").value;
+            let hund_ny = Math.round(16 * (Math.log(menneske)) + 31);
+            let hund_gammel = menneske * 7;
+            console.log("Din hund er " + hund_ny + " år gammel. " + "Engang ville den være " + hund_gammel + " år gammel.");
+        }
+
+    </script>
+</body>
+
+</html>
