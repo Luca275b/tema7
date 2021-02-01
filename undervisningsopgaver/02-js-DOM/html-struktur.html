@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #main {
+            margin: 10vw;
+        }
+
+        header,
+        footer {
+            text-align: center;
+        }
+
+        .articles {
+            --gap: 20px;
+            display: grid;
+            gap: var(--gap);
+            grid-template-columns:
+                repeat(auto-fit,
+                    minmax(clamp(50% - var(--gap), 350px, 100%),
+                        1fr));
+        }
+
+        .billede img {
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Titel</h1>
+    </header>
+
+    <section id="main">
+        <h2>Undertitel</h2>
+        <div class="articles">
+            <article class="article">
+                <div class="billede"><img src="https://placeimg.com/400/300/any" alt=""></div>
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus sapiente consectetur voluptatibus est similique possimus, ducimus ut, qui sint dolorum dolores aperiam voluptatem optio. Repellendus quo nulla aliquam sit eligendi.</p>
+            </article>
+            <article class="article">
+                <div class="billede"><img src="https://placeimg.com/400/300/any" alt=""></div>
+                <h3>Article 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus sapiente consectetur voluptatibus est similique possimus, ducimus ut, qui sint dolorum dolores aperiam voluptatem optio. Repellendus quo nulla aliquam sit eligendi.</p>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>This is the footer</p>
+    </footer>
+
+    <script src=""></script>
+</body>
+
+</html>
